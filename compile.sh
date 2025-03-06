@@ -1,8 +1,10 @@
 #!/bin/bash
+
 rm anykernel/*.dtb && rm anykernel/Image*
 rm build.log
 clear
-# Pilih kernel yang ingin dikompilasi
+
+# Kernels
 echo -e "$cyan Pilih kernel yang ingin dikompilasi: $normal"
 echo -e "1) Trinket"
 echo -e "2) A7K"
@@ -21,7 +23,7 @@ case $choice in
         ;;
 esac
 
-# Konfigurasi
+# Configuration
 DEFCONFIG="vendor/xf_defconfig"
 zipname="trinket.xf.zip"
 TC_DIR="$(pwd)/../sdclang"
@@ -45,7 +47,7 @@ make -j$(nproc --all) O="$KERNEL_OUT" ARCH=arm64 CC="ccache clang" LD=ld.lld \
     CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
     2>&1 | tee ../build.log
 
-# Cek hasil build dan zip
+# Check and zipping
 if [[ -f out/arch/arm64/boot/Image.gz-dtb ]] && [[ -f out/arch/arm64/boot/dtbo.img ]]; then
     COMPILE_END=$(date +"%s")
     COMPILE_TIME=$((COMPILE_END - COMPILE_START))
