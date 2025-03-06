@@ -17,7 +17,7 @@ case $choice in
         cd a7k_xf
         ;;
     3)
-        cd msm8937_xf
+        cd msm8937
         ;;
 esac
 
