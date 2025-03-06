@@ -1,6 +1,5 @@
 #!/bin/bash
 rm build.log
-
 clear
 # Pilih kernel yang ingin dikompilasi
 echo -e "$cyan Pilih kernel yang ingin dikompilasi: $normal"
@@ -33,7 +32,6 @@ ANYKERNEL_DIR="$(pwd)/../anykernel"
 
 export USE_CCACHE=1
 export CCACHE_DIR=~/.ccache
-ccache -M 25G #ccache size
 export PATH="$TC_DIR/bin:$PATH"
 export KBUILD_BUILD_USER="huza"
 export KBUILD_BUILD_HOST="archlinux"
