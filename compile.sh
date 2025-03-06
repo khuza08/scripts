@@ -29,7 +29,7 @@ KERNEL_OUT="out"
 ANYKERNEL_DIR="$(pwd)/../anykernel"
 
 
-# Setup lingkungan
+# SetEnv
 
 export USE_CCACHE=1
 export CCACHE_DIR=~/.ccache
