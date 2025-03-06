@@ -1,4 +1,5 @@
 #!/bin/bash
+rm anykernel/*.dtb && rm anykernel/Image*
 rm build.log
 clear
 # Pilih kernel yang ingin dikompilasi
