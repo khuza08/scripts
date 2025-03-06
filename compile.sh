@@ -22,7 +22,7 @@ esac
 
 # Konfigurasi
 DEFCONFIG="vendor/xf_defconfig"
-ZIPNAME="trinket.xf.zip"
+zipname="trinket.xf.zip"
 TC_DIR="$(pwd)/../sdclang"
 KERNEL_OUT="out"
 ANYKERNEL_DIR="$(pwd)/../anykernel"
