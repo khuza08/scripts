@@ -38,7 +38,7 @@ export KBUILD_BUILD_USER="huza"
 export KBUILD_BUILD_HOST="archlinux"
 mkdir -p "$KERNEL_OUT"
 
-# Kompilasi Kernel
+# Compile
 make O="$KERNEL_OUT" ARCH=arm64 "$DEFCONFIG"
 make -j$(nproc --all) O="$KERNEL_OUT" ARCH=arm64 CC="ccache clang" LD=ld.lld \
     CROSS_COMPILE=aarch64-linux-gnu- \
