@@ -14,7 +14,7 @@ case $choice in
         cd trinket
         ;;
     2)
-        cd a7k_xf
+        cd a7k
         ;;
     3)
         cd msm8937
