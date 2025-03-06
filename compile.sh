@@ -11,7 +11,7 @@ read -p "Masukkan pilihan (1/2/3): " choice
 
 case $choice in
     1)
-        cd trinket_xf
+        cd trinket
         ;;
     2)
         cd a7k_xf
