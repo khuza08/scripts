@@ -52,7 +52,7 @@ if [[ -f out/arch/arm64/boot/Image.gz-dtb ]] && [[ -f out/arch/arm64/boot/dtbo.i
     echo -e "$yellow Mengemas kernel ke dalam ZIP...$normal"
     cp out/arch/arm64/boot/Image.gz-dtb ../anykernel/
     cp out/arch/arm64/boot/dtbo.img ../anykernel/
-    cd ../anykernel/ && zip -r9 $zipname * && mv $zipname "$OLDPWD" && cd -
+    cd ../anykernel/ && zip -r9 $zipname * && cd -
     echo -e "$green Kernel berhasil dikemas: $zipname$normal"
 else
     echo -e "$red Build gagal!$normal"
