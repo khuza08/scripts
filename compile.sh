@@ -32,7 +32,6 @@ ANYKERNEL_DIR="$(pwd)/../anykernel"
 
 
 # SetEnv
-
 export USE_CCACHE=1
 export CCACHE_DIR=~/.ccache
 export PATH="$TC_DIR/bin:$PATH"
