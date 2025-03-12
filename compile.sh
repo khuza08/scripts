@@ -55,7 +55,7 @@ if [[ -f out/arch/arm64/boot/Image.gz-dtb ]] && [[ -f out/arch/arm64/boot/dtbo.i
     cp out/arch/arm64/boot/Image.gz-dtb ../anykernel/
     cp out/arch/arm64/boot/dtbo.img ../anykernel/
     cd ../anykernel/ && zip -r9 $zipname * && cd -
-    echo -e "$green Kernel berhasil dikemas: $zipname$normal"
+    echo -e "$green zipping success: $zipname$normal"
 else
     echo -e "$red Build gagal!$normal"
 fi
